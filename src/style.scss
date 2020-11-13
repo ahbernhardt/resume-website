@@ -1,0 +1,233 @@
+@import 'src/assets/vendors/motion';
+@font-face {
+  font-family: 'Canela Medium';
+  src: url('./assets/fonts/Canela-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('./assets/fonts/Canela-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF';
+  src: url('./assets/fonts/SF-Pro-Display-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF Light';
+  src: url('./assets/fonts/SF-Pro-Display-Light.otf');
+}
+
+@font-face {
+  font-family: 'SF Semi';
+  src: url('./assets/fonts/SF-Pro-Display-Semibold.otf');
+}
+
+$c-set-bg: #FFFFFF;
+$c-set-fg: #000000;
+:root {
+  --c-bg: #{$c-set-bg};
+  --c-fg: #{$c-set-fg};
+  -webkit-font-smoothing: antialiased;
+  --columns: 12;
+  --outer-gap: 7vw;
+  --inner-gap: 2vw;
+  --outer-col: calc(var(--outer-gap) - var(--inner-gap));
+  --header-height: 60px;
+}
+
+$c-bg: var(--c-bg);
+$c-fg: var(--c-fg);
+$ease-out: cubic-bezier(.165, .84, .44, 1);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SF', Helvetica, sans-serif;
+
+  a,
+  button.is-a {
+    text-decoration: none;
+    color: currentColor;
+    background: none;
+    border: none;
+    padding: 0;
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 3px;
+      height: 1px;
+      width: 100%;
+      opacity: 0;
+      background-color: currentColor;
+      transition: opacity .6s $ease-out;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::selection {
+    color: #ffc13b;
+  }
+
+  .line {
+  	overflow: hidden;
+  }
+
+  .intro-wrapper {
+  	transform-origin: top;
+  	background-color: black;
+  	width: 100vw;
+  	height: 100vh;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	z-index: 100;
+  }
+  // HEADER
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px var(--outer-gap);
+    position: relative;
+
+    .logo {
+      font-family: Nimbus-Bold, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: black;
+      text-transform: uppercase;
+      @include limo(left,1.1);
+    }
+
+    nav {
+      @include limo(right,1.1);
+
+      a {
+        font-family: SF Semi, sans-serif;
+        display: inline-block;
+        margin-left: 2em;
+      }
+    }
+  }
+
+  //MAIN
+  .main {
+    .Container{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(12,
+              minmax(0, 1fr)) ;
+      grid-column-gap: 2rem;
+      margin: 0;
+    }
+
+    .Resume{
+      margin-top: 35px;
+      grid-column: 3/12;
+      font-family: Canela Medium, sans-serif;
+      font-size: 72px;
+      line-height: 70px;
+    }
+
+    .Categories{
+      grid-column: 3/12;
+      opacity: 1;
+      margin: 75px 0 35px 0;
+      display: flex;
+      background: #FFFFFF;
+      list-style-type: none;
+    }
+
+      .Category{
+        padding-right: 75px;
+        list-style-type: none;
+      }
+        // Edu, Exp, skill
+        .CategoryTitle{
+          font-family: Canela, sans-serif;
+          font-size: 36px;
+          line-height: 40px;
+          font-weight: 500;
+          position: sticky;
+          top: 0;
+          background: #FFFFFF;
+          z-index: 1;
+        }
+
+
+        .SubCategories {
+          margin-top: 40px;
+          list-style-type: none;
+        }
+
+        .SubCategory {
+          position: relative;
+          padding-left: 17px;
+          margin-bottom: 55px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: black;
+          }
+        }
+
+      .SubCategoryTitle{
+        font-family: Nimbus-Black, sans-serif;
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      .SubCategorySubtitle {
+        font-size: 19.5px;
+        line-height: 25px;
+        margin-top: 18px;
+      }
+
+    .SubCategoryDescription {
+      font-family: Nimbus-Bold, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 10px;
+    }
+
+    .List {
+      margin-top: 10px;
+      list-style-type: none;
+    }
+
+    .Item {
+      list-style-type: none;
+      font-family: Nimbus, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      color: black;
+    }
+  }
+}
