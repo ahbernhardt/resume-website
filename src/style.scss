@@ -51,6 +51,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: 'SF', Helvetica, sans-serif;
+}
 
   a,
   button.is-a {
@@ -133,92 +134,177 @@ body {
   }
 
   //MAIN
-  //.main {
-    .Container{
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-gap: 1rem;
-      margin: 0;
-    }
 
+  .Container{
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .Resume{
+    margin: 10% 10% 0 10%;
+    font-family: Canela Medium, sans-serif;
+    font-size: 120px;
+    line-height: 70px;
+  }
+
+  .Categories{
+    width: 100%;
+    opacity: 1;
+    margin: 8% 10% 8% 10%;
+    display: inline-flex;
+    background: #FFFFFF;
+    list-style-type: none;
+  }
+
+  .Category{
+    padding-right: 6%;
+    list-style-type: none;
+  }
+        // Edu, Exp, skill
+  .CategoryTitle{
+    font-family: Canela, sans-serif;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1;
+  }
+
+
+  .SubCategories {
+    margin-top: 12%;
+    list-style-type: none;
+  }
+
+  .SubCategory {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 55px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: black;
+    }
+  }
+
+  .SubCategoryTitle{
+    font-family: Nimbus-Black, sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+
+  .SubCategorySubtitle {
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 5%;
+  }
+
+  .SubCategoryDescription {
+    font-family: Nimbus-Bold, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    color: #4e4e4e;
+    margin-top: 5%;
+  }
+
+
+  .List {
+    margin-top: 5%;
+    list-style-type: none;
+  }
+
+  .Item {
+    list-style-type: none;
+    font-family: Nimbus, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: black;
+  }
+
+  // small laptop
+  @media (min-width: 820px) and (max-width: 1220px){
     .Resume{
-      margin-top: 10%;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column: 2/8;
-      font-family: Canela Medium, sans-serif;
-      font-size: 120px;
-      line-height: 70px;
+      margin: 10% 25% 0 25%;
+      font-size: 85px;
     }
 
     .Categories{
       width: 100%;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column: 2/8;
       opacity: 1;
-      margin: 8% 0 35px 0;
+      margin: 8% 10% 8% 10%;
       display: inline-flex;
       background: #FFFFFF;
       list-style-type: none;
     }
 
-      .Category{
-        width: 95%;
-        padding-right: 8%;
-        list-style-type: none;
+    .Category{
+      padding-right: 6%;
+      list-style-type: none;
+    }
+
+    .CategoryTitle{
+      font-size: 48px;
+      line-height: 80px;
+      font-weight: 500;
+      position: sticky;
+      top: 0;
+      background: #FFFFFF;
+      z-index: 1;
+    }
+
+
+    .SubCategories {
+      margin-top: 12%;
+      list-style-type: none;
+    }
+
+    .SubCategory {
+      position: relative;
+      padding-left: 17px;
+      margin-bottom: 55px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: black;
       }
-        // Edu, Exp, skill
-        .CategoryTitle{
-          font-family: Canela, sans-serif;
-          font-size: 46px;
-          line-height: 80px;
-          font-weight: 500;
-          position: sticky;
-          top: 0;
-          background: #FFFFFF;
-          z-index: 1;
-        }
+    }
+
+    .SubCategoryTitle{
+      font-family: Nimbus-Black, sans-serif;
+      font-size: 36px;
+      line-height: 40px;
+    }
 
 
-        .SubCategories {
-          margin-top: 12%;
-          list-style-type: none;
-        }
-
-        .SubCategory {
-          position: relative;
-          padding-left: 17px;
-          margin-bottom: 55px;
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1px;
-            height: 100%;
-            background: black;
-          }
-        }
-
-      .SubCategoryTitle{
-        font-family: Nimbus-Black, sans-serif;
-        font-size: 36px;
-        line-height: 40px;
-      }
-
-      .SubCategorySubtitle {
-        font-size: 28px;
-        line-height: 32px;
-        margin-top: 5%;
-      }
+    .SubCategorySubtitle {
+      font-size: 32px;
+      line-height: 32px;
+      margin-top: 5%;
+    }
 
     .SubCategoryDescription {
       font-family: Nimbus-Bold, sans-serif;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 24px;
+      color: #4e4e4e;
       margin-top: 5%;
     }
+
 
     .List {
       margin-top: 5%;
@@ -229,12 +315,13 @@ body {
       list-style-type: none;
       font-family: Nimbus, sans-serif;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 22px;
       line-height: 32px;
       color: black;
     }
+  }
 
-
+  // MOBILE
   @media (max-width: 411px){
     header{
       width: 100%;
@@ -259,13 +346,13 @@ body {
 
     .Resume{
       font-size: 72px;
-      margin: 35% 0 0 2%;
+      margin: 35% 0 0 12%;
     }
 
     .Categories{
       width: 100%;
       display: block;
-      margin: 10% 0 0 2%;
+      margin: 10% 0 0 12%;
     }
 
     .CategoryTitle{
@@ -297,4 +384,4 @@ body {
   }
 
 //  body
-}
+
