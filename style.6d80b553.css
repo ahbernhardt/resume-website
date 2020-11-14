@@ -1,9 +1,7 @@
 /* set the minimum value of the breakpoint type
    and the number of columns associated to it: */
-/*
-Media queries helpers */
-/*
-Grid mixins */
+/* Media queries helpers */
+/* Grid mixins */
 * {
   box-sizing: border-box;
 }
@@ -65,7 +63,7 @@ body {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   font-family: "SF", Helvetica, sans-serif;
 }
@@ -122,75 +120,77 @@ body .intro-wrapper {
 body header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 50px var(--outer-gap);
+  align-items: flex-start;
+  margin: 75px var(--outer-gap);
   position: relative;
 }
 body header .logo {
   font-family: Nimbus-Bold, sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 20px;
   color: black;
   text-transform: uppercase;
-  left: calc(100vw * 1.1 / 32 + 0px);
-  left: calc(100vw * 1.1 / 32 + 0px);
 }
 body header nav {
-  right: calc(100vw * 1.1 / 32 + 0px);
-  right: calc(100vw * 1.1 / 32 + 0px);
+  right: calc(100vw * 1 / 32 + 0px);
+  right: calc(100vw * 1 / 32 + 0px);
 }
 body header nav a {
   font-family: SF Semi, sans-serif;
+  font-size: 22px;
   display: inline-block;
-  margin-left: 2em;
+  padding-right: 2.2em;
 }
-body .main .Container {
+body .Container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 2rem;
   margin: 0;
 }
-body .main .Resume {
-  margin-top: 35px;
-  grid-column: 3/12;
+body .Resume {
+  margin-top: 10%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2/8;
   font-family: Canela Medium, sans-serif;
-  font-size: 72px;
+  font-size: 120px;
   line-height: 70px;
 }
-body .main .Categories {
-  grid-column: 3/12;
+body .Categories {
+  width: 100%;
+  grid-column: 2/8;
   opacity: 1;
-  margin: 75px 0 35px 0;
-  display: flex;
+  margin: 8% 0 35px 0;
+  display: inline-flex;
   background: #FFFFFF;
   list-style-type: none;
 }
-body .main .Category {
-  padding-right: 75px;
+body .Category {
+  width: 100%;
+  padding-right: 8%;
   list-style-type: none;
 }
-body .main .CategoryTitle {
+body .CategoryTitle {
   font-family: Canela, sans-serif;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 72px;
+  line-height: 80px;
   font-weight: 500;
   position: sticky;
   top: 0;
   background: #FFFFFF;
   z-index: 1;
 }
-body .main .SubCategories {
-  margin-top: 40px;
+body .SubCategories {
+  margin-top: 12%;
   list-style-type: none;
 }
-body .main .SubCategory {
+body .SubCategory {
   position: relative;
   padding-left: 17px;
   margin-bottom: 55px;
 }
-body .main .SubCategory:before {
+body .SubCategory:before {
   content: "";
   position: absolute;
   top: 0;
@@ -199,33 +199,83 @@ body .main .SubCategory:before {
   height: 100%;
   background: black;
 }
-body .main .SubCategoryTitle {
+body .SubCategoryTitle {
   font-family: Nimbus-Black, sans-serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 36px;
+  line-height: 40px;
 }
-body .main .SubCategorySubtitle {
-  font-size: 19.5px;
-  line-height: 25px;
-  margin-top: 18px;
+body .SubCategorySubtitle {
+  font-size: 28px;
+  line-height: 32px;
+  margin-top: 5%;
 }
-body .main .SubCategoryDescription {
+body .SubCategoryDescription {
   font-family: Nimbus-Bold, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  margin-top: 10px;
+  font-size: 22px;
+  line-height: 24px;
+  margin-top: 5%;
 }
-body .main .List {
-  margin-top: 10px;
+body .List {
+  margin-top: 5%;
   list-style-type: none;
 }
-body .main .Item {
+body .Item {
   list-style-type: none;
   font-family: Nimbus, sans-serif;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 24px;
+  line-height: 32px;
   color: black;
+}
+@media (max-width: 411px) {
+  body header {
+    width: 100%;
+    display: flex;
+    margin: 12% 0 0 13%;
+  }
+  body header .logo {
+    font-size: 17px;
+  }
+  body header nav {
+    padding-right: 25%;
+    padding-top: 7%;
+    display: inline-flex;
+    align-self: flex-start;
+  }
+  body header nav a {
+    font-size: 13px;
+    font-family: SF Semi, sans-serif;
+  }
+  body .Resume {
+    font-size: 72px;
+    margin: 35% 0 0 2%;
+  }
+  body .Categories {
+    width: 100%;
+    display: block;
+    margin: 10% 0 0 2%;
+  }
+  body .CategoryTitle {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  body .SubCategoryTitle {
+    font-size: 32px;
+    line-height: 28px;
+  }
+  body .SubCategorySubtitle {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  body .SubCategoryDescription {
+    font-size: 19px;
+    line-height: 20px;
+    margin-top: 5%;
+  }
+  body .Item {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 /*# sourceMappingURL=/style.6d80b553.css.map */
