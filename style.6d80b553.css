@@ -67,16 +67,17 @@ body {
   height: 100vh;
   font-family: "SF", Helvetica, sans-serif;
 }
-body a,
-body button.is-a {
+
+a,
+button.is-a {
   text-decoration: none;
   color: currentColor;
   background: none;
   border: none;
   padding: 0;
 }
-body a:after,
-body button.is-a:after {
+a:after,
+button.is-a:after {
   content: "";
   display: block;
   margin-top: 3px;
@@ -86,28 +87,32 @@ body button.is-a:after {
   background-color: currentColor;
   transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-body a:hover::after,
-body button.is-a:hover::after {
+a:hover::after,
+button.is-a:hover::after {
   opacity: 1;
 }
-body a:focus,
-body button.is-a:focus {
+a:focus,
+button.is-a:focus {
   outline: none;
 }
-body a:hover,
-body button.is-a:hover {
+a:hover,
+button.is-a:hover {
   cursor: pointer;
 }
-body ::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   display: none;
 }
-body ::selection {
+
+::selection {
   color: #ffc13b;
 }
-body .line {
+
+.line {
   overflow: hidden;
 }
-body .intro-wrapper {
+
+.intro-wrapper {
   transform-origin: top;
   background-color: black;
   width: 100vw;
@@ -117,14 +122,15 @@ body .intro-wrapper {
   left: 0;
   z-index: 100;
 }
-body header {
+
+header {
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: flex-start;
   margin: 75px var(--outer-gap);
 }
-body header .logo {
+header .logo {
   font-family: Nimbus-Bold, sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -132,49 +138,47 @@ body header .logo {
   color: black;
   text-transform: uppercase;
 }
-body header nav {
+header nav {
   right: calc(100vw * 1 / 32 + 0px);
   right: calc(100vw * 1 / 32 + 0px);
 }
-body header nav a {
+header nav a {
   font-family: SF Semi, sans-serif;
   font-size: 22px;
   display: inline-block;
   padding-right: 2.2em;
 }
-body .Container {
+
+.Container {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 1rem;
+  display: block;
   margin: 0;
 }
-body .Resume {
-  margin-top: 10%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column: 2/8;
+
+.Resume {
+  margin: 10% 10% 0 10%;
   font-family: Canela Medium, sans-serif;
   font-size: 120px;
   line-height: 70px;
 }
-body .Categories {
+
+.Categories {
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column: 2/8;
   opacity: 1;
-  margin: 8% 0 35px 0;
+  margin: 8% 10% 8% 10%;
   display: inline-flex;
   background: #FFFFFF;
   list-style-type: none;
 }
-body .Category {
-  width: 95%;
-  padding-right: 8%;
+
+.Category {
+  padding-right: 6%;
   list-style-type: none;
 }
-body .CategoryTitle {
+
+.CategoryTitle {
   font-family: Canela, sans-serif;
-  font-size: 46px;
+  font-size: 60px;
   line-height: 80px;
   font-weight: 500;
   position: sticky;
@@ -182,16 +186,18 @@ body .CategoryTitle {
   background: #FFFFFF;
   z-index: 1;
 }
-body .SubCategories {
+
+.SubCategories {
   margin-top: 12%;
   list-style-type: none;
 }
-body .SubCategory {
+
+.SubCategory {
   position: relative;
   padding-left: 17px;
   margin-bottom: 55px;
 }
-body .SubCategory:before {
+.SubCategory:before {
   content: "";
   position: absolute;
   top: 0;
@@ -200,80 +206,178 @@ body .SubCategory:before {
   height: 100%;
   background: black;
 }
-body .SubCategoryTitle {
+
+.SubCategoryTitle {
   font-family: Nimbus-Black, sans-serif;
   font-size: 36px;
   line-height: 40px;
 }
-body .SubCategorySubtitle {
-  font-size: 28px;
+
+.SubCategorySubtitle {
+  font-size: 32px;
   line-height: 32px;
   margin-top: 5%;
 }
-body .SubCategoryDescription {
+
+.SubCategoryDescription {
   font-family: Nimbus-Bold, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 24px;
+  color: #4e4e4e;
   margin-top: 5%;
 }
-body .List {
+
+.List {
   margin-top: 5%;
   list-style-type: none;
 }
-body .Item {
+
+.Item {
   list-style-type: none;
   font-family: Nimbus, sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 32px;
   color: black;
 }
+
+@media (min-width: 820px) and (max-width: 1220px) {
+  .Resume {
+    margin: 10% 25% 0 25%;
+    font-size: 85px;
+  }
+
+  .Categories {
+    width: 100%;
+    opacity: 1;
+    margin: 8% 10% 8% 10%;
+    display: inline-flex;
+    background: #FFFFFF;
+    list-style-type: none;
+  }
+
+  .Category {
+    padding-right: 6%;
+    list-style-type: none;
+  }
+
+  .CategoryTitle {
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 1;
+  }
+
+  .SubCategories {
+    margin-top: 12%;
+    list-style-type: none;
+  }
+
+  .SubCategory {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 55px;
+  }
+  .SubCategory:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: black;
+  }
+
+  .SubCategoryTitle {
+    font-family: Nimbus-Black, sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .SubCategorySubtitle {
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 5%;
+  }
+
+  .SubCategoryDescription {
+    font-family: Nimbus-Bold, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    color: #4e4e4e;
+    margin-top: 5%;
+  }
+
+  .List {
+    margin-top: 5%;
+    list-style-type: none;
+  }
+
+  .Item {
+    list-style-type: none;
+    font-family: Nimbus, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: black;
+  }
+}
 @media (max-width: 411px) {
-  body header {
+  header {
     width: 100%;
     display: flex;
     margin: 12% 0 0 13%;
   }
-  body header .logo {
+  header .logo {
     font-size: 17px;
   }
-  body header nav {
+  header nav {
     padding-right: 25%;
     padding-top: 7%;
     display: inline-flex;
     align-self: flex-start;
   }
-  body header nav a {
+  header nav a {
     font-size: 13px;
     font-family: SF Semi, sans-serif;
   }
-  body .Resume {
+
+  .Resume {
     font-size: 72px;
-    margin: 35% 0 0 2%;
+    margin: 35% 0 0 12%;
   }
-  body .Categories {
+
+  .Categories {
     width: 100%;
     display: block;
-    margin: 10% 0 0 2%;
+    margin: 10% 0 0 12%;
   }
-  body .CategoryTitle {
+
+  .CategoryTitle {
     font-size: 48px;
     line-height: 64px;
   }
-  body .SubCategoryTitle {
+
+  .SubCategoryTitle {
     font-size: 32px;
     line-height: 28px;
   }
-  body .SubCategorySubtitle {
+
+  .SubCategorySubtitle {
     font-size: 24px;
     line-height: 26px;
   }
-  body .SubCategoryDescription {
+
+  .SubCategoryDescription {
     font-size: 19px;
     line-height: 20px;
     margin-top: 5%;
   }
-  body .Item {
+
+  .Item {
     font-size: 16px;
     line-height: 22px;
   }
