@@ -128,7 +128,7 @@ body {
         font-family: SF Semi, sans-serif;
         font-size: 22px;
         display: inline-block;
-        padding-right: 2.2em;
+        padding-right: 2em;
       }
     }
   }
@@ -142,16 +142,16 @@ body {
   }
 
   .Resume{
-    margin: 10% 10% 0 10%;
+    margin: 10% 9% 0 9%;
     font-family: Canela Medium, sans-serif;
-    font-size: 120px;
+    font-size: 100px;
     line-height: 70px;
   }
 
   .Categories{
     width: 100%;
     opacity: 1;
-    margin: 8% 10% 8% 10%;
+    margin: 8% 9% 8% 9%;
     display: inline-flex;
     background: #FFFFFF;
     list-style-type: none;
@@ -164,7 +164,7 @@ body {
         // Edu, Exp, skill
   .CategoryTitle{
     font-family: Canela, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     line-height: 80px;
     font-weight: 500;
     position: sticky;
@@ -197,20 +197,20 @@ body {
 
   .SubCategoryTitle{
     font-family: Nimbus-Black, sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 40px;
   }
 
 
   .SubCategorySubtitle {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 32px;
     margin-top: 5%;
   }
 
   .SubCategoryDescription {
     font-family: Nimbus-Bold, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
     color: #4e4e4e;
     margin-top: 5%;
@@ -226,98 +226,47 @@ body {
     list-style-type: none;
     font-family: Nimbus, sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 32px;
     color: black;
   }
 
   // small laptop
-  @media (min-width: 820px) and (max-width: 1220px){
+  @media (min-width: 1820px) and (max-width: 2000px){
     .Resume{
-      margin: 10% 25% 0 25%;
-      font-size: 85px;
+      margin: 10% 10% 0 10%;
+      font-size: 120px;
     }
 
     .Categories{
       width: 100%;
-      opacity: 1;
       margin: 8% 10% 8% 10%;
-      display: inline-flex;
-      background: #FFFFFF;
-      list-style-type: none;
-    }
-
-    .Category{
-      padding-right: 6%;
-      list-style-type: none;
     }
 
     .CategoryTitle{
-      font-size: 48px;
-      line-height: 80px;
-      font-weight: 500;
-      position: sticky;
-      top: 0;
-      background: #FFFFFF;
-      z-index: 1;
+      font-size: 60px;
     }
-
 
     .SubCategories {
       margin-top: 12%;
       list-style-type: none;
     }
 
-    .SubCategory {
-      position: relative;
-      padding-left: 17px;
-      margin-bottom: 55px;
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1px;
-        height: 100%;
-        background: black;
-      }
-    }
-
     .SubCategoryTitle{
-      font-family: Nimbus-Black, sans-serif;
       font-size: 36px;
-      line-height: 40px;
     }
 
 
     .SubCategorySubtitle {
       font-size: 32px;
-      line-height: 32px;
-      margin-top: 5%;
     }
 
     .SubCategoryDescription {
-      font-family: Nimbus-Bold, sans-serif;
       font-size: 24px;
-      line-height: 24px;
-      color: #4e4e4e;
-      margin-top: 5%;
-    }
-
-
-    .List {
-      margin-top: 5%;
-      list-style-type: none;
     }
 
     .Item {
-      list-style-type: none;
-      font-family: Nimbus, sans-serif;
-      font-weight: 400;
       font-size: 22px;
-      line-height: 32px;
-      color: black;
     }
   }
 
