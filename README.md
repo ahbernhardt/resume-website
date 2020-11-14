@@ -6,8 +6,8 @@
 [Yarn](https://yarnpkg.com) is recomended.
 
 ```bash
-git clone https://github.com/AndrewIH/LucasPerret.git
-cd LucasPerret
+git clone https://github.com/anguyen0208/online-resume.git
+cd online-resume
 yarn # or npm install
 yarn start # or npm start: launches dev server and opens browser. Ctrl+C to stop
 ```
