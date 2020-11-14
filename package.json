@@ -1,9 +1,9 @@
 {
-  "name": "new-project",
+  "name": "online-resume",
   "version": "1.0.0",
   "description": "Hello World",
   "keywords": [],
-  "homepage": "https://github.com/anguyen0208/online-resume",
+  "homepage": "https://anguyen0208.github.io/online-resume",
   "bugs": "https://github.com/anguyen0208/online-resume/issues",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
-  "author": "Paul-Antoine Soulhiard <contact@p-soulhiard.fr> (https://p-soulhiard.fr)",
+  "author": "anh Nguyen <anguyen0208@gmail.com> (https://anguyen0208.github.io)",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^6.6.0",

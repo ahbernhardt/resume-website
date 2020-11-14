@@ -1,6 +1,4 @@
-
-/*
-Media queries helpers */
+/* Media queries helpers */
 @mixin bp($i) {
   $bp: nth(nth($lk-bps, $i), 1);
   @if ($i == 1) {
@@ -12,6 +10,16 @@ Media queries helpers */
   }
 }
 
+@mixin x-small {
+  @include bp(1) {
+    @content;
+  }
+}
+@mixin small {
+  @include bp(1) {
+    @content;
+  }
+}
 @mixin medium {
   @include bp(2) {
     @content;
@@ -26,9 +34,7 @@ Media queries helpers */
   }
 }
 
-/*
-Grid mixins */
-
+/* Grid mixins */
 @mixin limo($prop, $n, $plus: 0px) {
   @each $bp, $cols in $lk-bps {
     @if ($bp == nth(nth($lk-bps, 1), 1)) {

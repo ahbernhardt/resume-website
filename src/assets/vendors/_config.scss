@@ -8,7 +8,10 @@ $lk-bps: (
 ) !default;
 
 $screen-xl-min: 1850px;
-$screen-med-min: 1850px;
+$screen-lg-min: 1248px;
+$screen-md-min: 864px;
+$screen-sm-min: 640px;
+$screen-xs-min: 352px;
 
 @mixin xl {
    @media (min-width: #{$screen-xl-min}) {
@@ -16,8 +19,26 @@ $screen-med-min: 1850px;
    }
 }
 
-@mixin med {
-   @media (min-width: #{$screen-med-min}) {
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
        @content;
    }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
 }
