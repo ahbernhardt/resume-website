@@ -1,5 +1,5 @@
 # Resume Online Version
-You can check it out [here](https://anguyen0208.github.io/online-resume/)
+You can check it out [here](https://anguyen0208.github.io/resume-website/)
 ## Contributing:
 
 > Requires [Node.js](https://nodejs.org), [Git](https://git-scm.com) and a nice terminal  
